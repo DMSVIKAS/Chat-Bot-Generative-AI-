@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Adjustments for layout */
+        .chat-container {
+            margin-right: 20px; /* Add some margin on the right for spacing */
+        }
+        .history {
+            padding-left: 15px; /* Add some padding to the left for aesthetics */
+            border-left: 1px solid #ccc; /* Add a left border for separation */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 chat-container"> <!-- Left half for chat -->
+            <div class="chat">
+                <div class="chat-header">
+                    V - GPT
+                </div>
+
+                <div class="chat-body" id="chat-body">
+                    <!-- Chat messages will be appended here -->
+                </div>
+
+                <div class="chat-footer">
+                    <input type="text" class="form-control" id="message-input" placeholder="Type your message here...">
+                    <button class="btn btn-primary" id="send-button">Send</button>
+                    <label class="switch">
+                        <input type="checkbox" id="mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 history"> <!-- Right half for history -->
+            <h5>Chat History</h5>
+            <div id="history">
+                <!-- History of prompts will be appended here -->
+            </div>
+        </div>
+    </div>
+
+<div class="floating-icon" onclick="window.location.href='tel:919292473'">
+    <div class="icon">
+        📞
+    </div>
+    <div class="contact-info">
+        <span>Queries</span><br>
+        <span>9390840898</span>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

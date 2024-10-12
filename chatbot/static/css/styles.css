@@ -1,0 +1,258 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+body {
+    background-color: #e0e5ec; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.dark-mode {
+    background-color: #181818; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+.history {
+    position: fixed; /* Make it fixed on the left */
+    left: 0;
+    top: 0;
+    width: 20%; /* Adjust width as needed */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling */
+    border-right: 1px solid #ced4da; /* Add a right border for separation */
+    padding: 10px;
+    background-color: white;
+    border-radius: 0; /* Remove rounding if you want it flush */
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.dark-mode .history {
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
+/* Adjust the chat-container */
+.chat-container {
+    display: flex;
+    height: 95vh;
+    width: 1500px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 22%; /* To align with the fixed history container */
+}
+.copy-btn {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    
+}
+
+.floating-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.contact-info {
+    display: none; /* Hide contact info initially */
+}
+
+.floating-icon:hover .contact-info {
+    display: block; /* Show contact info on hover */
+}
+
+
+
+.sidebar {
+    background-color: #e9ecef; /* Light gray background for sidebar */
+    padding: 15px; /* Add padding */
+    border-right: 1px solid #ced4da; /* Add a right border for separation */
+    max-height: 100vh; /* Make it full height */
+    overflow-y: auto; /* Scroll if content overflows */
+    width: 30%; /* Set width for sidebar */
+}
+
+.chat {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e5ec; /* Chat background */
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-left: 20px; /* Space between sidebar and chat */
+}
+
+.dark-mode .chat {
+    background-color: #1e1e1e; /* Dark mode background */
+    box-shadow: 8px 8px 16px #111, -8px -8px 16px #222;
+}
+
+.chat-header {
+    padding: 15px;
+    text-align: center;
+    background-color: #e0e5ec; /* Chat header background */
+    border-radius: 20px 20px 0 0;
+    box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+}
+
+.dark-mode .chat-header {
+    background-color: #1e1e1e; /* Dark mode header */
+    box-shadow: inset 2px 2px 4px #111, inset -2px -2px 4px #222;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto; /* Scroll if content overflows */
+    background-color: #e0e5ec; /* Chat body background */
+    box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+}
+
+.dark-mode .chat-body {
+    background-color: #1e1e1e; /* Dark mode chat body */
+    box-shadow: inset 2px 2px 4px #111, inset -2px -2px 4px #222;
+}
+
+.user-prompt {
+    background-color: #007bff; /* User message background */
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+
+.chat-footer {
+    padding: 15px;
+    background-color: #e0e5ec; /* Footer background */
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+}
+
+.dark-mode .chat-footer {
+    background-color: #1e1e1e; /* Dark mode footer */
+    box-shadow: inset 2px 2px 4px #111, inset -2px -2px 4px #222;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #e0e5ec; /* Input background */
+    border: none;
+    box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+}
+
+.dark-mode .chat-footer input {
+    background-color: #1e1e1e; /* Dark mode input */
+    color: #e0e0e0; /* Light text */
+    box-shadow: inset 2px 2px 4px #111, inset -2px -2px 4px #222;
+}
+
+.chat-footer button {
+    border-radius: 20px;
+    background-color: #007bff; /* Button background */
+    color: white;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.dark-mode .chat-footer button {
+    background-color: #007bff; /* Dark mode button */
+}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff; /* Checked state for switch */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move slider */
+}
+
+
+
+.user-prompt, .chatbot-response {
+    margin: 5px 0; /* Add margin for spacing */
+}
+
+/* Dark mode styles for history */
+
